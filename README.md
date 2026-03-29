@@ -54,15 +54,15 @@ This project walks through building a small 2D game step by step:
 **Phase 3: The Enemies (Asteroids)**
 
 
-5. The Asteroid Component:
+7. The Asteroid Component:
   Create asteroid.py.
   Define its draw() (a circle) and update() (position + velocity * dt) methods.
 
-6. The AsteroidField Manager:
+8. The AsteroidField Manager:
   Create asteroidfield.py.
   This component doesn't draw anything; it just spawns Asteroid objects at the screen edges on a timer.
 
-7. Collision Detection (Game Over):
+9. Collision Detection (Game Over):
   In the main loop, iterate through your asteroids group.
   Check if any asteroid collides_with(player). If so, print("Game over!") and sys.exit().
 
@@ -71,26 +71,26 @@ This project walks through building a small 2D game step by step:
 **Phase 4: Combat & Cleanup**
 
 
-8. The Shot Component:
+10. The Shot Component:
   Create a Shot class for bullets.
   Give it a constant speed and a small radius.
 
-9. Shooting Logic:
+11. Shooting Logic:
   In the Player class, add a shoot() method that creates a new Shot at the player's position, moving in the direction     the player is facing.
   Map this to pygame.K_SPACE with a "cooldown" timer so the player can't spam infinite bullets.
 
-10. Bullet Collisions:
+12. Bullet Collisions:
   In the main loop, check if any Shot collides with any Asteroid.
   Use .kill() on both objects when they touch.
 
 ---
 **Phase 5: Refinement (Splitting)**
 
-11. The split() Method:
+13. The split() Method:
   Inside the Asteroid class, add logic to spawn two smaller asteroids when a large one is killed by a shot.
   Calculate new velocities using vector.rotate().
 
-12. Final Polish:
+14. Final Polish:
   Ensure all objects are being drawn and updated correctly.
   Clear the screen with screen.fill("black") at the start of every loop.
   Call pygame.display.flip() at the end of every loop.
@@ -98,6 +98,6 @@ This project walks through building a small 2D game step by step:
 ---
 **Phase 6: Deployment**
 
-13. Git & GitHub:
+15. Git & GitHub:
   Create a .gitignore to ignore the venv/ folder.
   Push your code to a repository to share your victory!
